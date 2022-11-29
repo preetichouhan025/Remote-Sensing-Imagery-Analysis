@@ -13,27 +13,28 @@ def plot_data_loader(data_loader, gridDims):
             axes[i, j].imshow(np.transpose(images[0].numpy(), (1, 2, 0)))
 
 
-def plot_training_batch_loss(minibatch_loss_list, num_epochs, iter_per_epoch, averaging_iterations=100):
+def plot_training_batch_loss(minibatch_loss_list, num_epochs, iter_per_epoch, averaging_iterations=200):
 
-    plt.figure()
-    ax1 = plt.subplot(1, 1)
-    ax1.plot(range(len(minibatch_loss_list)),
+    plt.figure(figsize=(10,7))
+    plt.subplot(1, 1, 1)
+    plt.plot(range(len(minibatch_loss_list)),
              (minibatch_loss_list), label='Minibatch Loss')
 
-    ax1.plot(np.convolve(minibatch_loss_list,
+    plt.plot(np.convolve(minibatch_loss_list,
                          np.ones(averaging_iterations,)/averaging_iterations,
                          mode='valid'), label='Running Average')
 
-    ax1.set_xlabel('Iterations')
-    ax1.set_ylabel('Loss')
-    ax1.title("Minibatch Train Loss")
-    ax1.legend()
+    plt.xlabel('Iterations')
+    plt.ylabel('Loss')
+    plt.title("Minibatch Train Loss")
+    plt.legend()
     plt.tight_layout()
 
 
 def plot_accuracy(train_acc_list, valid_acc_list):
 
     num_epochs = len(train_acc_list)
+    plt.figure(figsize=(10,7))
     plt.plot(np.arange(1, num_epochs+1),
              train_acc_list, label='Training')
     plt.plot(np.arange(1, num_epochs+1),
@@ -41,13 +42,16 @@ def plot_accuracy(train_acc_list, valid_acc_list):
 
     plt.xlabel('Epoch')
     plt.ylabel('Accuracy')
+    plt.title("Train VS Validation Accuracy")
     plt.legend()
+    plt.grid()
     plt.tight_layout()
 
 
 def plot_loss(train_loss_list, valid_loss_list):
 
     num_epochs = len(train_loss_list)
+    plt.figure(figsize=(10,7))
     plt.plot(np.arange(1, num_epochs+1),
              train_loss_list, label='Training')
     plt.plot(np.arange(1, num_epochs+1),
@@ -56,6 +60,7 @@ def plot_loss(train_loss_list, valid_loss_list):
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.legend()
+    plt.grid()
     plt.title("Train VS Validation Loss")
     plt.tight_layout()
 
@@ -99,20 +104,22 @@ def plot_confusion_matrix(confusion_matrix,class_names=None):
     total_samples = confusion_matrix.sum(axis=1)[:, np.newaxis]
     normed_confusion_matrix = confusion_matrix.astype('float') / total_samples
 
+
+
     figsize = (len(confusion_matrix)*1.25, len(confusion_matrix)*1.25)
+    fig, ax = plt.subplots(figsize=figsize)
+    ax.grid(False)
 
     matrixshow = ax.matshow(confusion_matrix, cmap=plt.cm.Blues)
 
     fig.colorbar(matrixshow)
 
-    fig, ax = plt.subplots(figsize=figsize)
-    ax.grid(False)
 
     for i in range(confusion_matrix.shape[0]):
         for j in range(confusion_matrix.shape[1]):
             block_text = ""
             block_text += format(confusion_matrix[i, j], 'd')
-            ax.text(x=j, y=i, s=block_text, va='center', sha='center',
+            ax.text(x=j, y=i, s=block_text, va='center', 
                     color="white" if normed_confusion_matrix[i, j] > 0.5 else "black")
     
     if class_names is not None:

@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.metrics import classification_report
 from itertools import product
 
-def compute_confusion_matrix(model, data_loader, device):
+def compute_confusion_matrix(model, data_loader, device=torch.device('cuda')):
 
     all_ground_truth, all_predictions = [], []
 
@@ -40,15 +40,18 @@ def compute_confusion_matrix(model, data_loader, device):
 
     return matrix
 
-def compute_classification_report(test_loader, model):
+def compute_classification_report(test_loader, model, device =torch.device('cpu')):
     target_list = []
     predictions_list = []
 
-    for batch, (features, targets) in enumerate(test_loader):
+    for batch, (images, targets) in enumerate(test_loader):
         with torch.no_grad():
-            logits = model(features)
-            target_list.extend(targets)
-            predictions_list.extend(torch.argmax(logits, dim=1))
+            images = images.to(device)
+            logits = model(images)
+            _, predicted_labels = torch.max(logits, dim=1)
+
+            target_list.extend(targets.tolist())
+            predictions_list.extend(predicted_labels.tolist())
 
 
-    return classification_report(predictions_list, target_list)
+    return classification_report(predictions_list, target_list,  zero_division=0)
