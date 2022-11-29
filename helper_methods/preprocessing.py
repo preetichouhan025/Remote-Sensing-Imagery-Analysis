@@ -2,6 +2,7 @@ import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 import torch.utils.data as td
 
+
 def load_data(path, test_split, val_split, batch_size, input_size):
 
     normalize = transforms.Normalize(mean=[0.5, 0.5, 0.5],

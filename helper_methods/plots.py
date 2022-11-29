@@ -15,7 +15,7 @@ def plot_data_loader(data_loader, gridDims):
 
 def plot_training_batch_loss(minibatch_loss_list, num_epochs, iter_per_epoch, averaging_iterations=200):
 
-    plt.figure(figsize=(7,7))
+    plt.figure(figsize=(7,4))
     plt.subplot(1, 1, 1)
     plt.plot(range(len(minibatch_loss_list)),
              (minibatch_loss_list), label='Minibatch Loss')
@@ -34,7 +34,7 @@ def plot_training_batch_loss(minibatch_loss_list, num_epochs, iter_per_epoch, av
 def plot_accuracy(train_acc_list, valid_acc_list):
 
     num_epochs = len(train_acc_list)
-    plt.figure(figsize=(7,7))
+    plt.figure(figsize=(7,4))
     plt.plot(np.arange(1, num_epochs+1),
              train_acc_list, label='Training')
     plt.plot(np.arange(1, num_epochs+1),
@@ -51,7 +51,7 @@ def plot_accuracy(train_acc_list, valid_acc_list):
 def plot_loss(train_loss_list, valid_loss_list):
 
     num_epochs = len(train_loss_list)
-    plt.figure(figsize=(7,7))
+    plt.figure(figsize=(7,4))
     plt.plot(np.arange(1, num_epochs+1),
              train_loss_list, label='Training')
     plt.plot(np.arange(1, num_epochs+1),

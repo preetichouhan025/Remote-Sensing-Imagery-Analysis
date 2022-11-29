@@ -109,7 +109,7 @@ def train_model(model, num_epochs, train_loader,
             if early_stopping.early_stop:
               #saving the best model
               print("Early Stopping --- Saving the final model")
-              torch.save(model.state_dict(), path_to_save_model+file_name+'_FINAL_MODEL_WEIGHTS.pth')
+              torch.save(model, path_to_save_model+file_name+'_FINAL_MODEL_WEIGHTS2.pth')
               print("Final Model Saved. Training Complete!")
               break #stopping the training
 
@@ -118,9 +118,9 @@ def train_model(model, num_epochs, train_loader,
         
         scheduler.step()
 
-        if (epoch+1)%3 == 0:
+        if (epoch+1)%8 == 0:
             print("Saving intermediate model weights ")
-            torch.save(model.state_dict(), path_to_save_model + file_name+"_" + epoch +'_Intermdiate_MODEL_WEIGHTS.pth')
+            torch.save(model, path_to_save_model + file_name+"_" + str(epoch) +'_Intermdiate_MODEL_WEIGHTS2.pth')
 
         
 
@@ -128,7 +128,7 @@ def train_model(model, num_epochs, train_loader,
     print(f'Total Training Time: {elapsed:.2f} min')
 
     print("Saving FINAL model weights ")
-    torch.save(model.state_dict(), path_to_save_model + file_name+'_FINAL_MODEL_WEIGHTS.pth')
+    torch.save(model, path_to_save_model + file_name+'_FINAL_MODEL_WEIGHTS2.pth')
 
 
     return minibatch_loss_list, train_acc_list, valid_acc_list, train_loss_list, valid_loss_list
