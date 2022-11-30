@@ -10,8 +10,9 @@ class EarlyStopping():
         self.counter = 0
         self.early_stop = False
 
-    def __call__(self, train_loss, validation_loss):
+    def __call__(self, train_loss, validation_loss, validation_accuracy):
         if (float(train_loss) - float(validation_loss)) < self.min_delta:
             self.counter +=1
             if self.counter >= self.tolerance:  
-                self.early_stop = True
+                if float(validation_accuracy)>85.00:
+                    self.early_stop = True

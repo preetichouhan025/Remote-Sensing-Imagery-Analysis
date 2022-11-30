@@ -104,7 +104,7 @@ def train_model(model, num_epochs, train_loader,
             valid_loss_list.append(valid_loss)
 
             # early stopping
-            early_stopping('%.4f'%train_loss, '%.4f'%valid_loss)
+            early_stopping('%.4f'%train_loss, '%.4f'%valid_loss, '%.2f'%valid_acc)
             if early_stopping.early_stop:
               #saving the best model
               print("Early Stopping --- Saving the final model")
