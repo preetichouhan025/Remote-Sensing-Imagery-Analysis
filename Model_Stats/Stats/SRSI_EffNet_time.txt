@@ -1,0 +1,5 @@
+start training: 2022-11-30 03:33:54.188799
+
+end training: 2022-11-30 03:40:39.126328
+
+elapsed: 6.733333333333333 minutes
