@@ -12,7 +12,7 @@ This repo will be updated with routine data analysis and models training.
 
 ## Steps to predict classes with trained model weights ##
 
-* Access the drive having all trained weights along with test images : [ COMP6721_GROUP_N Drive ](https://drive.google.com/drive/folders/1pVE89-GnIktZOd2Te4tHndG6wkYxyA3T?usp=share_link)
+* Access the drive having all trained model weights along with sample test images : [ COMP6721_GROUP_N Drive ](https://drive.google.com/drive/folders/1pVE89-GnIktZOd2Te4tHndG6wkYxyA3T?usp=share_link)
 * Add Shortcut to the drive in your account so that it can accessed in google colab via mounting.
 * Once a shortcut to the drive is added in your account, open the [ Predict_Test_Images.ipynb file](https://github.com/SabaSalehi/LandscapeClassification/blob/main/Predict_Test_Images.ipynb).
 * Run the cells and follow the steps mentioned in the jupyter notebook to predict/test images. 
