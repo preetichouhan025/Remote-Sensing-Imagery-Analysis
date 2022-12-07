@@ -19,4 +19,20 @@ As a result, these models can be used in real-time to monitor the effectiveness 
 
 ## Dataset Samples ##
 
+### 1) Satellite RSI-CB256 Dataset samples
+![satellite_samples](https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/satEx.png)
+
+### 2) EUROSAT Dataset samples
+![eurosat_samples](https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/EuEx.png)
+
+### 3) Land-Use Dataset samples
+![landuse_samples](https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/landEx.png)
+
+## Model Training Results on three aforementioned datasets ##
+![acc_results](https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Val_ACC_overall.JPG)
+![loss_results](https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Val_loss_overall.JPG)
+
+
+
+
 
