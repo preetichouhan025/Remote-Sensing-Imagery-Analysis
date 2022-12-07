@@ -41,19 +41,19 @@ As a result, these models can be used in real-time to monitor the effectiveness 
 ## Model Training Results on three aforementioned datasets ##
 
 <p float="left">
-  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Val_ACC_overall.JPG" width="300" />
-  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Val_loss_overall.JPG" width="300" /> 
+  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Val_ACC_overall.JPG" width="350" />
+  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Val_loss_overall.JPG" width="350" /> 
 </p>
 
 ## VGG16, ResNet50 and EfficientNet_B0 performance ##
 
 <p float="left">
-  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/VGG16_performance.jpeg" width="150" />
-  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/ResNet50_performance.jpeg" width="150" /> 
-  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Enet_performance.jpeg" width="300" />
+  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/VGG16_performance.jpeg" width="200" />
+  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/ResNet50_performance.jpeg" width="200" /> 
+  <img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Enet_performance.jpeg" width="200" />
 </p>
 
 ## Training Score ##
-![ACC_LOSS](https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Model_results1.JPG)
-![f1score](https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Model_results2.JPG)
+<img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Model_results1.JPG" width="600">
+<img src="https://github.com/chouhanpreeti/COMP6721_GROUP_N/blob/main/readme_images/Model_results2.JPG" width="600">
 
