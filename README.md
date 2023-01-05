@@ -1,4 +1,4 @@
-# Landscape Classification (COMP6721_GROUP_N) #
+# Landscape Classification (Remote Sensing Imagery Analysis #
 Remote Sensing Imagery Analysis using Convolutional Neural Networks for Landscape Classification and Insights
 
 ## Project Overview ##
